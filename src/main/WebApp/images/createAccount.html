@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang = "en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+<meta charset="ISO-8859-1">
+<title>Create Acc</title>
+</head>
+<body>
+
+    <div align = "center">
+		<h2>Customer Register Form</h2>
+		<form method = "post" action = "createAcc" th:object = "${Customer}">
+
+			<label th:for="cname"> UsernameHTML: </label>  
+			<input class = "form-control" th:field = "*{cname}">
+			<span class = "error" th:errors= "*{cname}"></span>
+			<br>
+			
+			<label th:for="cemail"> EmailHTML: </label>  
+			<input type = "email" name = "cemail">				
+			<span class = "error" th:errors= "*{cemail}"></span>
+			<br>
+
+			<label th:for="cpassword"> PasswordHTML: </label>  
+			<input type = "password" name = "cpassword"> 
+			<span class = "error" th:errors= "*{cpassword}"></span>
+			<br>
+
+			<input class = "button" type = "submit" value = "Create Account">
+        </form>
+    </div>
+
+</body>
+</html>
