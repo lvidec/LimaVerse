@@ -23,7 +23,7 @@ import exception.DatabaseException;
 
 public class Database {
 	
-	private static final String DATABASE_FILE= "C:\\Java\\Spring Boot\\LimaVerse\\src\\main\\java\\Database\\database.properties";
+	private static final String DATABASE_FILE= "src\\main\\java\\Database\\database.properties";
 			
 	private static Connection ConnectToDatabase() throws FileNotFoundException, IOException, SQLException{
 		
